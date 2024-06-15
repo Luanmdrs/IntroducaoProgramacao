@@ -1,21 +1,19 @@
 from time import sleep
 
-print('Iniciando o programa.')
-
-'''A função sleep serve para o programa aguardar a quantidade de segundos definida.'''
+print('--- Iniciando o programa ---')
 sleep(2)
-nome = input('Digite o seu nome: ')
-idade = int(input('Digite a sua idade: '))
-ingresso = input('Ingresso VIP ou PISTA? ').upper()
 
+sexo = input('Informe seu gênero (HOMEM / MULHER): ').upper()
+altura = float(input('Informe sua altura: '))
 
-
-if idade >= 18 and ingresso == 'VIP':
-    print(f'{nome}, você pode entrar na festa.')
-    print('Siga em direção ao elevador!')
+if sexo == 'HOMEM':
+    p_ideal = (72.7*altura) - 58
+    print(f'Seu peso ideal é {p_ideal:.2f}kg.')
+elif sexo == 'MULHER':
+    p_ideal = (62.1*altura) - 44.7
+    print(f'Seu peso ideal é {p_ideal:.2f}kg.')
 else:
-    print(f'{nome}, você não pode entrar na festa.')
+    print('O gênero informado é inválido.')
 
 
-
-print('Finalizando o programa.')
+print('--- Fim do programa ---')
